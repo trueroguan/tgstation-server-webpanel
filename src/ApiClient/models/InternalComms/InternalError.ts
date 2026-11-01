@@ -21,6 +21,17 @@ export type GenericErrors =
     | ErrorCode.NO_APIPATH
     | ErrorCode.APP_FAIL;
 
+export type ReplayErrors =
+    | ErrorCode.REPLAY_INVALID
+    | ErrorCode.REPLAY_UNAUTHORIZED
+    | ErrorCode.REPLAY_FORBIDDEN
+    | ErrorCode.REPLAY_NOT_FOUND
+    | ErrorCode.REPLAY_CONFLICT
+    | ErrorCode.REPLAY_RATE_LIMITED
+    | ErrorCode.REPLAY_UNAVAILABLE
+    | ErrorCode.REPLAY_NETWORK
+    | ErrorCode.UNHANDLED_RESPONSE;
+
 export enum ErrorCode {
     OK = 'Isnt displayed but is used as an "error" when everything is ok', //void
     HTTP_BAD_REQUEST = "error.http.bad_request", //errmessage
@@ -88,7 +99,16 @@ export enum ErrorCode {
 
     BAD_CHANNELS_JSON = "error.bad_channels_json",
 
-    BAD_HUB_CONNECTION = "error.bad_hub_connection"
+    BAD_HUB_CONNECTION = "error.bad_hub_connection",
+
+    REPLAY_INVALID = "error.replay.invalid",
+    REPLAY_UNAUTHORIZED = "error.replay.unauthorized",
+    REPLAY_FORBIDDEN = "error.replay.forbidden",
+    REPLAY_NOT_FOUND = "error.replay.not_found",
+    REPLAY_CONFLICT = "error.replay.conflict",
+    REPLAY_RATE_LIMITED = "error.replay.rate_limited",
+    REPLAY_UNAVAILABLE = "error.replay.unavailable",
+    REPLAY_NETWORK = "error.replay.network"
 }
 
 type errorMessage = {

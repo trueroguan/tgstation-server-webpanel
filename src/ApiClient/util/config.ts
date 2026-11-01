@@ -78,6 +78,12 @@ const configOptions = asElementTypesConfig({
                   ? new URL("..", new URL(window.publicPath, window.location.href)).href
                   : DEFAULT_APIPATH
     },
+    replayapipath: {
+        id: "config.replayapipath",
+        type: "str",
+        site_local: true,
+        value: "replays/"
+    },
     jobpollinactive: {
         id: "config.jobpollinactive",
         type: "num",
